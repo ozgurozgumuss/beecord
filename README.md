@@ -1,4 +1,4 @@
-[release-badge]: https://img.shields.io/github/release-pre/ClearVision/v6.svg?style=flat-square
+[release-badge]: https://img.shields.io/github/release-pre/ClearVision/v1.svg?style=flat-square
 [release-link]: https://github.com/ClearVision/v6/releases
 [license-badge]: https://img.shields.io/github/license/ClearVision/v6.svg?style=flat-square
 [license-link]: https://github.com/ClearVision/v6/blob/master/LICENSE
@@ -13,11 +13,11 @@
 
 # BEECORD V1
 
-//[![Releases][release-badge]][release-link]
-//[![License][license-badge]][license-link]
-//[![Discord Server][discord-badge]][discord-link]
-//[![Issues][issues-badge]][issues-link]
-//[![Pull Requests][prs-badge]][prs-link]
+[![Releases][release-badge]][release-link]
+[![License][license-badge]][license-link]
+[![Discord Server][discord-badge]][discord-link]
+[![Issues][issues-badge]][issues-link]
+[![Pull Requests][prs-badge]][prs-link]
 
 ![v6 Sapphire](https://github.com/ClearVision/ClearVision-v6/raw/master/screenshots/6-stable.4.7.9.png)
 
