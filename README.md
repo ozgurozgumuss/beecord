@@ -3,7 +3,7 @@
 [license-badge]: https://img.shields.io/github/license/ClearVision/v6.svg?style=flat-square
 [license-link]: https://github.com/ClearVision/v6/blob/master/LICENSE
 [discord-badge]: https://img.shields.io/discord/212324635356692500.svg?style=flat-square
-[discord-link]: https://clearvision.gitlab.io/join
+[discord-link]: discord.gg/uvWDD76
 [issues-badge]: https://img.shields.io/github/issues/ClearVision/v6.svg?style=flat-square
 [issues-link]: https://github.com/ClearVision/v6/issues
 [prs-badge]: https://img.shields.io/github/issues-pr/ClearVision/v6.svg?style=flat-square
@@ -13,7 +13,7 @@
 
 # BEECORD V1
 
-[![License][license-badge]][license-link]
+[![License][license-badge]]
 [![Discord Server][discord-badge]][discord-link]
 
 ![v6 Sapphire](https://github.com/ClearVision/ClearVision-v6/raw/master/screenshots/6-stable.4.7.9.png)
@@ -23,7 +23,7 @@
 ## Installing
 Download the theme file and move it into your [BetterDiscord](https://betterdiscord.net) themes folder:
 
->[ClearVision_v6.theme.css](https://clearvision.gitlab.io/download/v6/latest)
+>[ClearVision_v6.theme.css](https://github.com/ozgurozgumuss/beecord/blob/master/beecord_v1.theme.css)
 
 ## Building from source
 In order build the theme from source you will need [Sass](https://sass-lang.com) & [PostCSS Autoprefixer](https://github.com/postcss/autoprefixer).  
