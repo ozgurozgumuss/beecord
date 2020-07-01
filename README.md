@@ -13,7 +13,7 @@
 
 # BEECORD V1
 
-[![Releases][release-badge]][release-link]
+[![Releases][release-badge]][v1.0.0]
 [![License][license-badge]][license-link]
 [![Discord Server][discord-badge]][discord-link]
 [![Issues][issues-badge]][issues-link]
