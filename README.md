@@ -11,7 +11,7 @@
 
 <div align="center">
 
-# ClearVision v6
+# BEECORD V1
 
 [![Releases][release-badge]][release-link]
 [![License][license-badge]][license-link]
