@@ -23,7 +23,7 @@
 ## Installing
 Download the theme file and move it into your [BetterDiscord](https://betterdiscord.net) themes folder:
 
->[ClearVision_v6.theme.css](https://github.com/ozgurozgumuss/beecord/blob/master/beecord_v1.theme.css)
+>[beecord_v1.theme.css](https://github.com/ozgurozgumuss/beecord/blob/master/beecord_v1.theme.css)
 
 ## Building from source
 In order build the theme from source you will need [Sass](https://sass-lang.com) & [PostCSS Autoprefixer](https://github.com/postcss/autoprefixer).  
