@@ -1,0 +1,95 @@
+/* TITLEBAR */
+// TITLEBAR WINDOWS
+%titlebarWin {
+	height: 18px;
+	width: 100vw;
+	margin: 0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background: rgba(0, 0, 0, calc(#{cv("bg.app.shading")} * .6));
+	box-shadow: 0 0 20px rgba(0, 0, 0, calc(#{cv("bg.app.shading")} * .6));
+	> %titlebarWordmark {
+		position: static;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 1;
+		pointer-events: none;
+		user-select: none;
+		order: 1;
+		&:before,
+		&:after {
+			margin-left: 3px;
+			font-weight: 600;
+			white-space: nowrap;
+			order: 1;
+		}
+		&:before {
+			content: cv("const:text.titlebar.main");
+			color: hsla(0, 0%, 100%, .7);
+			font-size: 14px;
+			text-shadow: 0 0 3px #000;
+		}
+		&:after {
+			content: cv("const:text.titlebar.version");
+			color: hsla(0, 0%, 100%, .3);
+			font-family: cv("font.code");
+			font-size: 10px;
+		}
+		> svg {
+			filter: drop-shadow(0 0 5px $main-color);
+			> path {
+				fill: $main-color;
+			}
+		}
+	}
+	> %titlebarWinButton {
+		top: -2px;
+		opacity: .7;
+		transition: all .15s ease-in-out;
+		&:hover {
+			background: hsla(0, 0%, 100%, .1);
+			opacity: 1;
+		}
+	}
+	> %titlebarWinButtonClose {
+		&:hover {
+			background: cv("colors.danger");
+		}
+	}
+}
+
+// TITLEBAR OSX
+%titlebarMac {
+	width: 70px;
+	height: 48px;
+	&%titlebarUnfocused {
+		%titlebarMacButton {
+			background: hsla(0, 0%, 100%, .7);
+		}
+	}
+	> %titlebarMacButtons {
+		padding: 0 10px;
+	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	&:before,
+	&:after {
+		margin: 0 2px;
+		font-size: 10px;
+		order: 1;
+	}
+	&:before {
+		content: cv("const:text.titlebar.short");
+		color: $main-color;
+		font-weight: 700;
+		text-shadow: 0 0 3px;
+	}
+	&:after {
+		content: "#{$version}";
+		color: hsla(0, 0%, 100%, .3);
+	}
+}

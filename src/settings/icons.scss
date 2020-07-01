@@ -1,0 +1,95 @@
+/* SETTINGS SIDEBAR ICONS */
+%settingsSidebar {
+
+	// USER SETTINGS
+	[aria-label="USER_SETTINGS"] & {
+
+		// ICON MAP
+		$icons: (
+			"My Account": "https://clearvision.gitlab.io/icons/person.svg",
+			"Privacy & Safety": "https://clearvision.gitlab.io/icons/security.svg",
+			"Authorized Apps": "https://clearvision.gitlab.io/icons/apps.svg",
+			"Connections": "https://clearvision.gitlab.io/icons/link.svg",
+			"Billing": "https://clearvision.gitlab.io/icons/payment.svg",
+
+			"Subscriptions": "https://clearvision.gitlab.io/icons/nitro.svg",
+			"Gift Inventory": "https://clearvision.gitlab.io/icons/gift.svg",
+			"Server Boost": "https://clearvision.gitlab.io/icons/server_boost.svg",
+			"HypeSquad": "https://clearvision.gitlab.io/icons/hypesquad.svg",
+
+			"Voice & Video": "https://clearvision.gitlab.io/icons/mic.svg",
+			"Overlay": "https://clearvision.gitlab.io/icons/aspect_ratio.svg",
+			"Notifications": "https://clearvision.gitlab.io/icons/notifications.svg",
+			"Keybinds": "https://clearvision.gitlab.io/icons/keyboard.svg",
+			"Game Activity": "https://clearvision.gitlab.io/icons/games.svg",
+			"Text & Images": "https://clearvision.gitlab.io/icons/chat.svg",
+			"Appearance": "https://clearvision.gitlab.io/icons/camera.svg",
+			"Streamer Mode": "https://clearvision.gitlab.io/icons/videocam.svg",
+			"Language": "https://clearvision.gitlab.io/icons/language.svg",
+			"Windows Settings": "https://clearvision.gitlab.io/icons/windows.svg",
+			"Linux Settings": "https://clearvision.gitlab.io/icons/linux.svg",
+
+			"Change Log": "https://clearvision.gitlab.io/icons/history.svg",
+			"Experiments": "https://clearvision.gitlab.io/icons/flask.svg",
+			"Developer Options": "https://clearvision.gitlab.io/icons/bug.svg",
+
+			"Log Out": "https://clearvision.gitlab.io/icons/exit.svg"
+		);
+
+		// SETTINGS LISTS
+		$general: cv("disc:settings.general");
+		$windows: cv("disc:settings.windows");
+		$osx: cv("disc:settings.osx");
+		$linux: cv("disc:settings.linux");
+		$web: cv("disc:settings.web");
+
+		// GENERAL STYLES
+		%tabBarItem {
+			padding-left: 50px !important;
+			&:before {
+				content: "";
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				left: 15px;
+				margin-top: -2px;
+			}
+		}
+
+		// ICON STYLES
+		@each $i, $u in $icons {
+			$id: unique-id();
+			%tabBarItem%#{$id}:before {
+				background-image: url(#{$u});
+			}
+			@if (index($general, $i)) {
+				:nth-child(#{index($general, $i) + 1}) {
+					@extend %#{$id};
+				}
+			}
+			@if (index($windows, $i)) {
+				%platformWin & :nth-child(#{index($windows, $i) + length($general) + 1}) {
+					@extend %#{$id};
+				}
+			}
+			@if (index($osx, $i)) {
+				%platformOSX & :nth-child(#{index($osx, $i) + length($general) + 1}) {
+					@extend %#{$id};
+				}
+			}
+			@if (index($linux, $i)) {
+				%platformLinux & :nth-child(#{index($linux, $i) + length($general) + 1}) {
+					@extend %#{$id};
+				}
+			}
+			@if (index($web, $i)) {
+				%platformWeb & :nth-child(#{index($web, $i) + length($general) + 1}) {
+					@extend %#{$id};
+				}
+			}
+		}
+		%tabBarItem:nth-last-child(3):before {
+			background-image: url(#{map-get($icons, "Log Out")});
+		}
+	}
+}

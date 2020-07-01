@@ -1,0 +1,162 @@
+/* MEMBERS */
+%membersWrap {
+	min-width: auto;
+	flex-basis: cv("members-width");
+	%members {
+		width: cv("members-width");
+		background: rgba(0, 0, 0, calc(#{cv("bg.app.shading")} * .6));
+	}
+}
+%members {
+
+	// GROUP
+	%membersGroup {
+		padding-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $main-color;
+		font-size: 11px;
+		font-weight: 700;
+		text-align: center;
+		transition: all .15s ease-in-out;
+		opacity: .85;
+		&[style*="color:"] {
+			opacity: 1;
+		}
+		&:before {
+			content: "";
+			height: 2px;
+			flex-grow: 1;
+			background: linear-gradient(to left, currentColor 50%, transparent);
+			margin-right: 5px;
+		}
+		&:after {
+			content: "";
+			height: 2px;
+			flex-grow: 1;
+			background: linear-gradient(to right, currentColor 50%, transparent);
+			margin-left: 5px;
+		}
+	}
+
+	// MEMBER
+	%member {
+		background: transparent !important;
+		backface-visibility: hidden;
+		&%memberOffline {
+			%listItemAvatar {
+				filter: grayscale(100%) blur(1px);
+				transition: all .5s ease-in-out;
+			}
+			&:hover {
+				%listItemAvatar {
+					filter: none;
+				}
+			}
+		}
+		%listItemLayout {
+			position: relative;
+			background: transparent;
+			transition: all .15s ease-in-out, transform .1s ease-in-out;
+			z-index: 1;	
+			&:active {
+				transform: scale(.9);
+			}
+		}
+		%listItemRoleColor {
+			max-width: 100%;
+			overflow: visible;
+			transition: all .15s ease-in-out;
+			&:before {
+				content: "";
+				position: absolute;
+				@include stretch;
+				background: linear-gradient(to right, hsla(0, 0%, 100%, .07) 90%, transparent);
+				border-radius: 3px;
+				opacity: 0;
+				transition: all .15s ease-in-out;
+				z-index: -1;
+				pointer-events: none;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				@include pos(0, 100%, 0, 0);
+				background: linear-gradient(to right, $main-color 90%, transparent);
+				border-radius: 3px;
+				opacity: .8;
+				transition: all .3s ease-in-out;
+				z-index: -1;
+				pointer-events: none;
+			}
+			&[style*="color:"]{
+				&:before,
+				&:after {
+					background: linear-gradient(to right, currentColor 90%, transparent);
+				}
+			}
+		}	
+		&:hover,
+		&%listItemSelected {
+			%listItemRoleColor {
+				&:before {
+					opacity: 1;
+				}
+				&[style*="color:"]:before {
+					opacity: .07;
+				}
+			}
+		}
+		&%listItemSelected {
+			%listItemRoleColor {
+				-webkit-text-fill-color: #fff;
+				text-shadow: 0 0 3px rgba(0, 0, 0, .7);
+				&:after {
+					right: 0;
+				}
+			}
+		}
+	}
+
+	// PLACEHOLDERS
+	%memberGroupPlaceholder {
+		margin: 0 25%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-basis: 50%;
+		color: hsla(0, 0%, 100%, .3);
+		&:before,
+		&:after {
+			content: "";
+			height: 2px;
+			flex-grow: 1;
+		}
+		&:before {
+			background: linear-gradient(to left, currentColor 50%, transparent);
+			margin-right: calc(50% + 5px);
+			margin-left: -50%;
+		}
+		&:after {
+			background: linear-gradient(to right, currentColor 50%, transparent);
+			margin-right: -50%;
+			margin-left: calc(50% + 5px);
+		}
+	}
+	%memberGroupPlaceholder,
+	%memberPlaceholderAvatar,
+	%memberPlaceholderUsername,
+	%memberPlaceholderUsernameMultiple {
+		background: hsla(0, 0%, 100%, .3);
+	}
+}
+%memberOwnerIcon {
+	background: url(https://clearvision.gitlab.io/icons/crown.svg) center/contain no-repeat;
+	opacity: .4;
+	transition: all .15s ease-in-out;
+	> path,
+	> g {
+		display: none;
+	}
+}

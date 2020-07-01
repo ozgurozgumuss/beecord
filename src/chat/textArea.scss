@@ -1,0 +1,138 @@
+/* CHAT CHANNEL TEXT AREA */
+%chatForm {
+	border-color: hsla(0, 0%, 100%, .07);
+	%textArea {
+		padding-left: 54px;
+		padding-right: 128px;
+	}
+	.charcounter {
+		color: hsla(0, 0%, 100%, .3);
+	}
+}
+%channelTextArea {
+	%channelTextAreaScrollable {
+		background: transparent;
+		overflow: visible;
+	}
+	%channelTextAreaInner {
+		background: rgba(0, 0, 0, .4);
+		border-radius: 5px;
+		transform: translateZ(0);
+	}
+	%channelTextAreaAttachButton {
+		%channelTextAreaAttachButtonPlus {
+			opacity: .3;
+			transition: all .15s ease-in-out;
+		}
+		&:hover {
+			%channelTextAreaAttachButtonPlus {
+				opacity: .7;
+			}
+		}	
+	}
+	%channelTextAreaAttachWrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: none;
+		&:after {
+			content: "";
+			position: fixed;
+			top: 2px;
+			bottom: 2px;
+			left: 44px;
+			border-right: 1px solid hsla(0, 0%, 100%, .07);
+		}
+	}
+	%textArea {
+		max-height: 122px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		&::placeholder {
+			color: hsla(0, 0%, 100%, .2);
+		}
+		~ %channelTextAreaButtons {
+			position: absolute;
+			top: 0;
+			right: 8px;
+			&:after {
+				content: "";
+				position: fixed;
+				@include stretch;
+				border: 2px solid hsla(0, 0%, 100%, .1);
+				border-radius: 5px;
+				box-shadow: 0 0 3px;
+				color: transparent;
+				transition: all .15s ease-in-out;
+				pointer-events: none;
+			}
+		}
+		&:focus ~ %channelTextAreaButtons {
+			&:after {
+				border-color: $main-color;
+				color: $main-color;
+			}
+		}
+	}
+
+
+
+	// fix for slate textarea
+	// %textArea {
+	// 	position: static;
+	// }
+	// %textAreaPlaceholder {
+	// 	color: hsla(0, 0%, 100%, .2);
+	// }
+	// %slateTextArea {
+	// 	&:after {
+	// 		content: "";
+	// 		position: absolute;
+	// 		@include pos(-2px, -2px, -2px, -2px);
+	// 		border: 2px solid hsla(0, 0%, 100%, .1);
+	// 		border-radius: 5px;
+	// 		box-shadow: 0 0 3px;
+	// 		color: transparent;
+	// 		transition: all .15s ease-in-out;
+	// 		pointer-events: none;
+	// 	}
+	// 	&:focus {
+	// 		&:after {
+	// 			border-color: $main-color;
+	// 			color: $main-color;
+	// 		}
+	// 	}
+	// }
+
+	// BUTTONS
+	%channelTextAreaButton {
+		opacity: .3;
+		transition: all .15s ease-in-out;
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	// TYPING
+	%channelTextAreaTyping {
+		background: transparent;
+		%channelTextAreaTypingText {
+			color: hsla(0, 0%, 100%, .5);
+			> strong {
+				color: hsla(0, 0%, 100%, .7);
+				font-weight: 700;
+			}
+		}
+	}
+
+	// CHANNEL INFO DISPLAY
+	%channelInfo {
+		background: hsla(0, 0%, 100%, .07);
+		border-radius: 5px;
+		color: hsla(0, 0%, 100%, .7);
+		%channelInfoImage {
+			filter: grayscale(1);
+			opacity: .5;
+		}
+	}
+}

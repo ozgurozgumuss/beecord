@@ -1,0 +1,315 @@
+/* CHANNEL */
+%channelContent {
+	transition: all .15s ease-in-out;
+}
+%channelContent {
+	position: relative;
+	background: transparent !important;
+	&:before {
+		content: "";
+		position: absolute;
+		@include stretch;
+		transition: all .15s ease-in-out;
+		z-index: -1;
+		pointer-events: none;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		@include pos(0, 100%, 0, 0);
+		opacity: .9;
+		transition: all .3s ease-in-out;
+		z-index: -1;
+		pointer-events: none;
+	}
+	%channelIcon {
+		width: 18px;
+		height: 18px;
+		margin-right: 3px;
+		color: hsla(0, 0%, 100%, .3);
+		opacity: 1;
+		transition: all .15s ease-in-out;
+		> path {
+			opacity: .7;
+		}
+		> path:last-of-type {	
+			opacity: 1;
+		}
+	}
+	%channelName {
+		color: hsla(0, 0%, 100%, .3);
+		transition: all .15s ease-in-out;
+	}
+}
+%channelButtons {
+	margin-left: 1px;
+	animation: cv-fade-to-3 .15s ease-in-out;
+}
+%channelActionIcon {
+	color: #fff;
+	opacity: .3;
+	transition: all .15s ease-in-out;
+	&:hover {
+		opacity: .7;
+	}
+}
+%channelWrapper {
+
+	// HOVER
+	&:hover {
+		%channelContent {
+			&:before {
+				background: hsla(0, 0%, 100%, .1);
+			}
+			%channelContainerDefault & {
+				%channelIcon,
+				%channelName {
+					color: hsla(0, 0%, 100%, .7);
+				}
+			}
+		}
+	}
+
+	// UNREAD
+	&%channelWrapperUnread {
+		%channelContent {
+			%channelName {
+				color: $main-color;
+				text-shadow: 0 0 3px;
+			}
+			%channelIcon {
+				color: $main-color;
+				filter: drop-shadow(0 0 3px);
+				opacity: 1;
+			}
+		}
+		&:hover {
+			%channelContent {
+				%channelName {
+					color: #fff;
+				}
+				%channelIcon {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	// SELECTED
+	&%channelWrapperSelected {
+		%channelContent {
+			&:before {
+				background: hsla(0, 0%, 100%, .1);
+			}
+			&:after {
+				right: 0;
+				background: $main-color;
+				animation: cv-channel-select .3s ease-in-out;
+			}
+			%channelContainerDefault & {
+				%channelIcon,
+				%channelName {
+					color: #fff;
+				}
+			}
+			%channelActionIcon {
+				opacity: .7;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	
+	// CONNECTED
+	&%channelWrapperConnected {
+		%channelContent {
+			%channelName {
+				color: $main-color;
+				text-shadow: 0 0 3px;
+			}
+			%channelIcon {
+				color: $main-color;
+				filter: drop-shadow(0 0 3px);
+			}
+		}
+	}
+
+	// MUTED
+	&%channelWrapperMuted {
+		%channelContent {
+			%channelIcon,
+			%channelName {
+				color: hsla(0, 0%, 100%, .1);
+			}
+		}
+		&:hover {
+			%channelContent {
+				&:before {
+					background: hsla(0, 0%, 100%, .07);
+				}
+				%channelContainerDefault & {
+					%channelIcon,
+					%channelName {
+						color: hsla(0, 0%, 100%, .3);
+					}
+				}
+			}
+		}
+	}
+}
+
+// UNREAD & MENTIONS INDICATION
+%channelUnreadPill {
+	display: none;
+}
+
+// ICONS
+%channelActionIcon {
+	&[name=Gear] {
+		background: url(https://clearvision.gitlab.io/icons/settings.svg) no-repeat center/18px;
+		&:hover {
+			animation: cv-spin 2.5s linear infinite;
+		}
+		> path {
+			display: none;
+		}
+	}
+	&[name=Invite] {
+		background: url(https://clearvision.gitlab.io/icons/person_add.svg) no-repeat center/18px;
+		> path {
+			display: none;
+		}
+	}
+}
+
+// USER LIMIT
+%channelUserLimitUsers,
+%channelUserLimitTotal {
+	width: 24px;
+	color: hsla(0, 0%, 100%, .3);
+	font-weight: 600;
+	text-align: right;
+	transition: all .15s ease-in-out;
+}
+%channelUserLimitUsers {
+	padding: 0 4px 0 6px;
+	background: rgba(0, 0, 0, .15);
+}
+%channelUserLimitTotal {
+	padding: 0 6px 0 4px;
+	background: hsla(0, 0%, 100%, .04);
+	box-shadow: inset 1px 0 hsla(0, 0%, 100%, .07);
+	&:after {
+		display: none;
+	}
+}
+%channelWrapperConnected {
+	%channelUserLimitUsers {
+		color: $main-color;
+		text-shadow: 0 0 1px;
+	}
+}
+
+// VOICE USER LIST
+%voiceUserList {
+	padding-left: 24px;
+}
+%voiceUser {
+	z-index: 1;
+	%voiceUserContent {
+		border-radius: 3px;
+		transition: all .15s ease-in-out;
+	}
+	&:hover,
+	&:active,
+	&%voiceUserSelected {
+		%channels %voiceUserList & {
+			%voiceUserContent {
+				background: hsla(0, 0%, 100%, .04);
+			}
+			%voiceUserName {
+				color: hsla(0, 0%, 100%, .7);
+			}
+		}
+	}
+	%voiceUserAvatar {
+		position: relative;
+		transition: all .1s ease-in-out;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			@include pos($top: 0, $bottom: 0, $left: 50%);
+			background: linear-gradient(to right, $main-color 10%, transparent);
+			opacity: .5;
+			transition: all .1s ease-in-out,  width .15s ease-in-out;
+			pointer-events: none;
+			z-index: -1;
+		}
+	}
+	%voiceUserAvatarSpeaking {
+		box-shadow: 0 0 0 2px $main-color, inset 0 0 3px rgba(0, 0, 0, .5);
+		&:after {
+			@include pos($top: -2px, $bottom: -2px);
+			width: 100px;
+		}
+	}
+	%voiceUserName {
+		color: hsla(0, 0%, 100%, .5);
+		transition: all .1s ease-in-out;
+	}
+	%voiceUserNameSpeaking {
+		color: #fff !important;
+	}
+}
+
+// ICONS
+%voiceUserIcon {
+	> path {
+		display: none;
+	}
+
+	// MUTE
+	> path:nth-child(4) {
+		display: inline;
+		d: path("M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.33 3 2.99 3 .22 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z");
+	}
+
+	// DEAFEN
+	> path:nth-child(3):last-child {
+		display: inline;
+		d: path("M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z");
+	}
+}
+
+// USER SUMMARY
+%userSummaryIcon {
+	width: 18px;
+	height: 18px;
+	margin-right: 3px;
+	color: hsla(0, 0%, 100%, .3);
+}
+%userSummaryMoreUsers {
+	padding: 0 4px;
+	background: rgba(0, 0, 0, .3);
+	border-radius: 10px;
+}
+
+// DRAG INDICATORS
+%categoryContainerDrag,
+%channelContainerDrag {
+	&:before,
+	&:after {
+		background: $main-color;
+		border-radius: 0;
+	}
+}
+%channelContainerUserOver {
+	&:after {
+		background: $main-color;
+		border-color: transparent;
+		opacity: .1;
+	}
+}

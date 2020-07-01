@@ -1,0 +1,12 @@
+/* SETTINGS CONTENT */
+%standardSidebarView {
+	> %settingsContentRegion {
+		background: transparent;
+	}
+}
+%settingsContentRegion {
+	%settingsContentScroller,
+	%settingsContentSidebarScroller {
+		background: transparent;
+	}
+}

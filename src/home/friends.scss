@@ -1,0 +1,195 @@
+/* FRIENDS */
+%base {
+	%friends {
+		background-color: transparent;
+	}
+}
+%friends {
+
+	// FRIENDS HEADER
+	%friendsHeaderBar {
+		%friendsTabBar {
+			%tabBarItem {
+				background: transparent !important;
+				color: hsla(0, 0%, 100%, .5) !important;
+				transition: all .3s ease-in-out;
+				&:hover {
+					background-color: rgba(0, 0, 0, .5) !important;
+					color: hsla(0, 0%, 100%, .7) !important;
+				}
+				&%tabBarItemSelected {
+					background-color: $main-color !important;
+					color: #fff !important;
+				}
+			}
+		}
+		%friendsHeaderSeparator {
+			background-color: hsla(0, 0%, 100%, .1);
+		}
+	}
+
+	// FRIENDS TABLE
+	%friendsTable {
+		background-color: rgba(0, 0, 0, calc(#{cv("bg.app.shading")} * .5));
+		margin-top: 0;
+		%friendsTableHeader {
+			border-bottom: 1px solid hsla(0, 0%, 100%, .07);
+			%friendsColumn {
+				color: hsla(0, 0%, 100%, .3);
+			}
+			%friendsColumnSeparator {
+				background-color: hsla(0, 0%, 100%, .07);
+			}
+		}
+		%friendsTableBody {
+			background: transparent;
+		}
+		%friendsRow {
+			background-color: transparent;
+			transition: all .15s ease-in-out;
+			&,
+			&:hover {
+				margin: 0 20px;
+				padding: 0 10px;
+				+ %friendsRow {
+					border-top: 1px solid transparent;
+					&[style*="opacity: 1"] {
+						border-top-color: hsla(0, 0%, 100%, .04);
+					}
+				}
+			}
+			&:hover {
+				background-color: rgba(0, 0, 0, .3);
+				border-radius: 0;
+				%friendsColumnName %friendsColumnNameDiscordTag %friendsColumnNameDiscriminator {
+					opacity: .6;
+				}
+			}
+			+ %friendsRow {
+				margin-top: -1px;
+			}
+			%friendsColumnNameUsername {
+				color: hsla(0, 0%, 100%, .6);
+			}
+			%friendsColumnNameDiscriminator {
+				color: hsla(0, 0%, 100%, .3);
+				visibility: visible;
+				opacity: 0;
+				transition: all .15s ease-in-out;
+			}
+			&:hover {
+				%friendsColumnNameDiscriminator {
+					opacity: 1;
+				}
+			}
+			%friendsColumnStatus {
+				color: hsla(0, 0%, 100%, .5);
+				%friendActivityText {
+					> strong {
+						color: $main-color;
+						font-weight: 600;
+					}
+				}
+			}
+			%friendsColumnGuilds {
+				%avatarSmall {
+					background-color: transparent;
+				}
+				%friendsGuildIcon {
+					background-color: rgba(0, 0, 0, .3);
+				}
+			}
+			%friendsColumnActions {
+				padding-right: 12px;
+				opacity: 0;
+				visibility: visible;
+				transition: all .3s ease-in-out;
+				%friendsAction {
+					background-color: $main-color;
+					border-radius: 3px;
+					color: hsla(0, 0%, 100%, .9);
+					transition: all .15s ease-in-out;
+					&:hover {
+						background-color: $hover-color;
+						color: #fff;
+					}
+				}
+				%friendsActionAccept:hover {
+					background-color: cv("colors.success") !important;
+				}
+				%friendsActionDeny:hover {
+					background-color: cv("colors.danger") !important;
+				}
+			}
+			&:hover %friendsColumnActions {
+				padding-right: 12px;
+				opacity: 1;
+			}
+		}
+		%friendsTableBodyImage {
+			filter: grayscale(1) brightness(2);
+			opacity: .3;
+		}
+		%friendsTableBodyText,
+		%friendsTableBodyTitle {
+			color: hsla(0, 0%, 100%, .5);
+		}
+
+		// FRIEND ADD PAGE
+		%friendsTableAddWrapper {
+			%friendsTableAddHeader {
+				background: transparent;
+				border-bottom: 1px solid hsla(0, 0%, 100%, .07);
+				%friendsAddFriendInputWrapper {
+					background-color: rgba(0, 0, 0, .3);
+					border: none;
+					transform: translateZ(0);
+					> %friendsAddFriendInput {
+						&::placeholder {
+							color: hsla(0, 0%, 100%, .2);
+						}
+						+ %friendsAddFriendHint {
+							&:after {
+								content: "";
+								position: fixed;
+								@include stretch;
+								border: 1px solid transparent;
+								border-radius: 3px;
+								transition: all .3s ease-in-out;
+								pointer-events: none;
+							}
+						}
+						&:focus + %friendsAddFriendHint {
+							&:after {
+								border-color: $main-color;
+								box-shadow: 0 0 1px $main-color;
+							}
+						}
+					}
+					> %friendsAddFriendHint {
+						color: hsla(0, 0%, 100%, .2);
+					}
+				}
+			}
+			%friendsTableConnectAccountButton {
+				background-color: hsla(0, 0%, 100%, .04);
+				border-color: transparent;
+				transition: all .15s ease-in-out;
+				&:hover {
+					background-color: hsla(0, 0%, 100%, .1);
+				}
+			}
+			%friendsTableSuggestionsHeader {
+				background-color: transparent;
+				border-bottom: 1px solid hsla(0, 0%, 100%, .07);
+			}
+			%friendsTableAddH2 {
+				color: hsla(0, 0%, 100%, .7);
+			}
+			%friendsTableAddDescription,
+			%friendsTableConnectAccounts h3 {
+				color: hsla(0, 0%, 100%, .5);
+			}
+		}
+	}
+}
