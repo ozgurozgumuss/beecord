@@ -3,7 +3,7 @@
 [license-badge]: https://img.shields.io/github/license/ClearVision/v6.svg?style=flat-square
 [license-link]: https://github.com/ClearVision/v6/blob/master/LICENSE
 [discord-badge]: https://img.shields.io/discord/212324635356692500.svg?style=flat-square
-[discord-link]: discord.gg/uvWDD76
+[discord-link]: https://discord.gg/uvWDD76
 [issues-badge]: https://img.shields.io/github/issues/ClearVision/v6.svg?style=flat-square
 [issues-link]: https://github.com/ClearVision/v6/issues
 [prs-badge]: https://img.shields.io/github/issues-pr/ClearVision/v6.svg?style=flat-square
