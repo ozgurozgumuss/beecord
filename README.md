@@ -13,7 +13,7 @@
 
 # BEECORD V1
 
-[![License][license-badge]]
+![License][license-badge]
 [![Discord Server][discord-badge]][discord-link]
 
 ![v6 Sapphire](https://github.com/ClearVision/ClearVision-v6/raw/master/screenshots/6-stable.4.7.9.png)
