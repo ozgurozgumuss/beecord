@@ -3,14 +3,14 @@
  * @author ozgurO
  * @version 1
  * @description Highly customizable theme for BetterDiscord.
- * @source https://github.com/ClearVision/ClearVision-v6
+ * @source https://github.com/ozgurozgumuss/beecord
  * @website https://clearvision.gitlab.io
  */
 
 /* Credits to ClearVision for making the original theme. */
 
 /* IMPORT CSS */
-@import url(https://ozgurozgumus.github.io/bee/main.css);
+@import url(https://ozgurozgumuss.github.io/beecord/main.css);
 
 /* SETTINGS */
 :root {
