@@ -4,7 +4,7 @@
 [license-link]: https://github.com/ozgurozgumuss/beecord/blob/master/LICENSE
 [issues-badge]: https://img.shields.io/github/issues/ozgurozgumuss/beecord?color=yellowgreen&logo=beecord&style=for-the-badge
 [issues-link]: https://github.com/ozgurozgumuss/beecord/issues
-[discord-badge]: https://img.shields.io/discord/712465159553286187?color=informational&logo=beecord&style=for-the-badge
+[discord-badge]: https://img.shields.io/discord/712465159553286187?color=informational&label=DC&logo=beecord&style=for-the-badge
 [discord-link]: https://discord.com/invite/uvWDD76
 [prs-badge]: https://img.shields.io/github/issues-pr/ozgurozgumuss/beecord?color=yellow&logo=beecord&style=for-the-badge
 [prs-link]: https://github.com/ozgurozgumuss/beecord/pulls
