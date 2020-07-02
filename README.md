@@ -14,7 +14,7 @@
 # BEECORD V1
 
 ![License][license-badge]
-![Discord Server][discord-badge]][discord-link]
+[![Discord Server][discord-badge]][discord-link]
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
 
