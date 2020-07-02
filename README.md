@@ -16,8 +16,6 @@
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/ozgurozgumuss/beecord/releases/)
 [![Generic badge](https://img.shields.io/badge/discord-online-green.svg)](https://discord.gg/uvWDD76)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/ozgurozgumuss/beecord/blob/master/LICENSE)
-![License][license-badge]
-[![Discord Server][discord-badge]][discord-link]
 
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
