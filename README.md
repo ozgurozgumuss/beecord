@@ -15,7 +15,7 @@
 
 ![License][license-badge]
 [![Discord Server][discord-badge]][discord-link]
-[![Generic badge](https://img.shields.io/badge/<VERSION>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/version-v1.0.0-<COLOR>.svg)](https://github.com/ozgurozgumuss/beecord/releases)
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
 
