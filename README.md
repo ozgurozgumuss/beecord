@@ -1,11 +1,11 @@
 [release-badge]: https://img.shields.io/github/release-pre/ClearVision/v1.svg?style=flat-square
-[release-link]: https://github.com/ClearVision/v6/releases
+[release-link]: https://github.com/ozgurozgumuss/beecord/releases
 [license-badge]: https://img.shields.io/github/license/ClearVision/v6.svg?style=flat-square
-[license-link]: https://github.com/ClearVision/v6/blob/master/LICENSE
+[license-link]: https://github.com/ozgurozgumuss/beecord/blob/master/LICENSE
 [discord-badge]: https://img.shields.io/discord/212324635356692500.svg?style=flat-square
 [discord-link]: https://discord.gg/uvWDD76
 [issues-badge]: https://img.shields.io/github/issues/ClearVision/v6.svg?style=flat-square
-[issues-link]: https://github.com/ClearVision/v6/issues
+[issues-link]: https://github.com/ozgurozgumuss/beecord/issues
 [prs-badge]: https://img.shields.io/github/issues-pr/ClearVision/v6.svg?style=flat-square
 [prs-link]: https://github.com/ClearVision/v6/pulls
 
@@ -14,7 +14,7 @@
 # BEECORD V1
 
 ![License][license-badge]
-[![Discord Server][discord-badge]][discord-link]
+![Discord Server][discord-badge]][discord-link]
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
 
@@ -23,7 +23,7 @@
 ## Installing
 Download the theme file and move it into your [BetterDiscord](https://betterdiscord.net) themes folder:
 
->[beecord_v1.theme.css](https://gitlab.com/ozgurozgumuss/beecord/-/raw/master/beecord_v1.theme.css?inline=false)
+>[beecord_v1.theme.css](https://ozgurozgumuss.github.io/beecord/)
 
 ## Building from source
 In order build the theme from source you will need [Sass](https://sass-lang.com) & [PostCSS Autoprefixer](https://github.com/postcss/autoprefixer).  
