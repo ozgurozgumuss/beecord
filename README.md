@@ -1,21 +1,25 @@
-[release-badge]: https://img.shields.io/github/release-pre/ClearVision/v1.svg?style=flat-square
+[release-badge]: https://img.shields.io/github/v/release/ozgurozgumuss/beecord?label=version&logo=beecord&style=for-the-badge
 [release-link]: https://github.com/ozgurozgumuss/beecord/releases
-[license-badge]: https://img.shields.io/github/license/ClearVision/v6.svg?style=flat-square
+[license-badge]: https://img.shields.io/github/license/ozgurozgumuss/beecord?logo=beecord&style=for-the-badge
 [license-link]: https://github.com/ozgurozgumuss/beecord/blob/master/LICENSE
-[discord-badge]: https://img.shields.io/discord/212324635356692500.svg?style=flat-square
-[discord-link]: https://discord.gg/uvWDD76
-[issues-badge]: https://img.shields.io/github/issues/ClearVision/v6.svg?style=flat-square
+[issues-badge]: https://img.shields.io/github/issues/ozgurozgumuss/beecord?color=yellowgreen&logo=beecord&style=for-the-badge
 [issues-link]: https://github.com/ozgurozgumuss/beecord/issues
-[prs-badge]: https://img.shields.io/github/issues-pr/ClearVision/v6.svg?style=flat-square
+[discord-badge]: https://img.shields.io/discord/712465159553286187?color=informational&logo=beecord
+[discord-link]: https://discord.com/invite/uvWDD76
+[prs-badge]: https://img.shields.io/github/issues-pr/ozgurozgumuss/beecord?color=yellow&logo=beecord&style=for-the-badge
 [prs-link]: https://github.com/ozgurozgumuss/beecord/pulls
 
 <div align="center">
 
+
+
 # BEECORD V1
 
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/ozgurozgumuss/beecord/releases/)
-[![Generic badge](https://img.shields.io/badge/discord-online-green.svg)](https://discord.gg/uvWDD76)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/ozgurozgumuss/beecord/blob/master/LICENSE)
+[![Releases][release-badge]][release-link]
+[![License][license-badge]][license-link]
+[![Issues][issues-badge]][issues-link]
+[![Pull Requests][prs-badge]][prs-link]
+[![Discord Server][discord-badge]][discord-link]
 
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
