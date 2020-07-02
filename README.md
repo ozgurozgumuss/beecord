@@ -13,9 +13,12 @@
 
 # BEECORD V1
 
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/ozgurozgumuss/beecord/releases)
+[![Generic badge](https://img.shields.io/badge/discord-online-green.svg)](https://discord.gg/uvWDD76)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/ozgurozgumuss/beecord/blob/master/LICENSE)
 ![License][license-badge]
 [![Discord Server][discord-badge]][discord-link]
-[![Generic badge](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/ozgurozgumuss/beecord/releases)
+
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
 
@@ -24,7 +27,7 @@
 ## Installing
 Download the theme file and move it into your [BetterDiscord](https://betterdiscord.net) themes folder:
 
->[beecord_v1.theme.css](https://ozgurozgumuss.github.io/beecord/)
+>[Visit for download](https://ozgurozgumuss.github.io/beecord/)
 
 ## Building from source
 In order build the theme from source you will need [Sass](https://sass-lang.com) & [PostCSS Autoprefixer](https://github.com/postcss/autoprefixer).  
