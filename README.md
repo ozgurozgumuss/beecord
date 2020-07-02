@@ -7,7 +7,7 @@
 [issues-badge]: https://img.shields.io/github/issues/ClearVision/v6.svg?style=flat-square
 [issues-link]: https://github.com/ozgurozgumuss/beecord/issues
 [prs-badge]: https://img.shields.io/github/issues-pr/ClearVision/v6.svg?style=flat-square
-[prs-link]: https://github.com/ClearVision/v6/pulls
+[prs-link]: https://github.com/ozgurozgumuss/beecord/pulls
 
 <div align="center">
 
@@ -15,6 +15,7 @@
 
 ![License][license-badge]
 [![Discord Server][discord-badge]][discord-link]
+[![Generic badge](https://img.shields.io/badge/<VERSION>-<STATUS>-<COLOR>.svg)](https://shields.io/)
 
 ![v6 Sapphire](https://github.com/ozgurozgumuss/beecord/raw/master/screenshots/6-stable.4.7.9.png)
 
