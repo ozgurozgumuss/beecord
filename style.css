@@ -1,19 +1,37 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 body {
-  background-color: #f1c40f;
+  background-image: url(https://i.hizliresim.com/RR0Zv7.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
   overflow: hidden;
+  cursor: wait;
 }
 
 h1 {
   position: absolute;
-  font-family: 'Open Sans';
+  font-family: 'Righteous';
   font-weight: 600;
-  font-size: 12px;
+  font-size: 18px;
   text-transform: uppercase;
-  left: 50%;
+  left: 49%;
   top: 58%;
   margin-left: -20px;
+  color: rgb(255, 0, 234);
 }
+h2 {
+    position: absolute;
+    font-family: 'Righteous';
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    left: 49.1%;
+    top: 57.8%;
+    margin-left: -20px;
+    color: rgb(0, 0, 0);
+  }
 
 .body {
   position: absolute;
@@ -25,7 +43,7 @@ h1 {
 .body > span {
   height: 5px;
   width: 35px;
-  background: #000;
+  background: rgb(255, 0, 234);
   position: absolute;
   top: -19px;
   left: 60px;
@@ -37,7 +55,7 @@ h1 {
   width: 0;
   height: 0;
   border-top: 6px solid transparent;
-  border-right: 100px solid #000;
+  border-right: 100px solid rgb(255, 0, 234);
   border-bottom: 6px solid transparent;
 }
 .base span:before {
@@ -45,7 +63,7 @@ h1 {
   height: 22px;
   width: 22px;
   border-radius: 50%;
-  background: #000;
+  background: rgb(255, 0, 234);
   position: absolute;
   right: -110px;
   top: -16px;
@@ -56,7 +74,7 @@ h1 {
   width: 0;
   height: 0;
   border-top: 0 solid transparent;
-  border-right: 55px solid #000;
+  border-right: 55px solid rgb(255, 0, 234);
   border-bottom: 16px solid transparent;
   top: -16px;
   right: -98px;
@@ -66,7 +84,7 @@ h1 {
   position: absolute;
   height: 12px;
   width: 20px;
-  background: #000;
+  background: rgb(255, 0, 234);
   border-radius: 20px 20px 0 0;
   transform: rotate(-40deg);
   right: -125px;
@@ -76,7 +94,7 @@ h1 {
   content: "";
   height: 12px;
   width: 12px;
-  background: #000;
+  background: rgb(255, 0, 234);
   right: 4px;
   top: 7px;
   position: absolute;
@@ -88,10 +106,11 @@ h1 {
 .body > span > span:nth-child(1),
 .body > span > span:nth-child(2),
 .body > span > span:nth-child(3),
-.body > span > span:nth-child(4) {
+.body > span > span:nth-child(4),
+.body > span > span:nth-child(5) {
   width: 30px;
   height: 1px;
-  background: #000;
+  background: rgb(255, 0, 234);
   position: absolute;
   animation: fazer1 .2s linear infinite;
 }
@@ -112,6 +131,11 @@ h1 {
   animation: fazer4 1s linear infinite;
   animation-delay: -1s;
 }
+.body > span > span:nth-child(5) {
+    top: 2px;
+    animation: fazer5 1s linear infinite;
+    animation-delay: -1s;
+  }
 
 @keyframes fazer1 {
   0% {
@@ -149,6 +173,15 @@ h1 {
     opacity: 0;
   }
 }
+@keyframes fazer5 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -111px;
+      opacity: 0;
+    }
+  }
 @keyframes speeder {
   0% {
     transform: translate(2px, 1px) rotate(0deg);
@@ -193,7 +226,7 @@ h1 {
   position: absolute;
   height: 2px;
   width: 20%;
-  background: #000;
+  background: rgb(255, 0, 234);
 }
 .longfazers span:nth-child(1) {
   top: 20%;
@@ -213,6 +246,16 @@ h1 {
   top: 80%;
   animation: lf4 .5s linear infinite;
   animation-delay: -3s;
+}
+.longfazers span:nth-child(5) {
+    top: 98%;
+    animation: lf5 .5s linear infinite;
+    animation-delay: -3s;
+}
+.longfazers span:nth-child(6) {
+    top: 10%;
+    animation: lf6 .6s linear infinite;
+    animation-delay: -4s;
 }
 
 @keyframes lf {
@@ -251,3 +294,21 @@ h1 {
     opacity: 0;
   }
 }
+@keyframes lf5 {
+    0% {
+      left: 200%;
+    }
+    100% {
+      left: -100%;
+      opacity: 0;
+    }
+  }
+  @keyframes lf6 {
+    0% {
+      left: 200%;
+    }
+    100% {
+      left: -100%;
+      opacity: 0;
+    }
+  }
