@@ -20,15 +20,15 @@ h1 {
   color: rgb(255, 0, 234);
 }
 h2 {
-    position: absolute;
-    font-family: 'Righteous';
-    font-weight: 600;
-    font-size: 18px;
-    text-transform: uppercase;
-    left: 49.1%;
-    top: 57.8%;
-    margin-left: -20px;
-    color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: 'Righteous';
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  left: 49.1%;
+  top: 57.8%;
+  margin-left: -20px;
+  color: rgb(0, 0, 0);
   }
 
 .body {
